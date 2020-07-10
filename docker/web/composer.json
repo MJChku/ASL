@@ -1,0 +1,6 @@
+{
+  "require":{
+    "owasp/csrf-protector-php": "dev-master"
+  }
+
+}

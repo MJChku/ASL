@@ -1,0 +1,6 @@
+{
+	"db_host": "localhost",
+	"db_user": "php_db",
+	"db_pass": "Wv6t$M3vj9rGQug3B5&WS+ZYD-9P^rXV",
+	"db_socket": "/var/run/mysqld/mysqld.sock"
+}

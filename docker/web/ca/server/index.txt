@@ -1,0 +1,1 @@
+V	201127165947Z		1000	unknown	/C=CH/ST=ZH/L=Zurich/O=iMovies/CN=asl-server

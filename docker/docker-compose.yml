@@ -1,0 +1,31 @@
+version: "3.7"
+services:
+  imovies-web:
+    build: ./web
+    image: imovies:web
+    container_name: imovies-web
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock
+      - /var/log/imovies-web/:/var/log/
+    networks:
+      - backend
+    depends_on:
+      - imovies-core
+    restart: always
+
+  imovies-core:
+    build: ./core
+    image: imovies:core
+    container_name: imovies-core
+    volumes:
+      - /var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock
+      - /var/log/imovies-core/:/var/log/
+    networks:
+      - backend
+    restart: always
+
+networks:
+        backend:
